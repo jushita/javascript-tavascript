@@ -19,7 +19,7 @@ function Reverse(str){
     res = res.join("");
     return res;
 }
-Reverse("abcd");
+//Reverse("abcd");
 
 
 function isPallindrom(str)
@@ -53,8 +53,8 @@ function isPalindrome(str) {
     return true;
 }
 
-console.log(isPallindrom("mom"));
-console.log(isPalindrome("m"));
+//console.log(isPallindrom("mom"));
+//console.log(isPalindrome("m"));
 
 
 
@@ -70,7 +70,7 @@ function countOccurance(str){
     }
     console.log(dict);
 }
-countOccurance("aabbcccd")
+//countOccurance("aabbcccd")
 
 //Write a method which will remove any given character from a String?
 
@@ -85,9 +85,9 @@ function removeChar(str, s){
     console.log(arr_str.join(""));
 }
 
-removeChar("abcda","a")
+//removeChar("abcda","a")
 
-console.log("aaaam".replace(/a/gi, ""));
+//console.log("aaaam".replace(/a/gi, ""));
 
 //How do you find second highest number in an integer array?
 //var myFunc = function (){}
@@ -96,10 +96,10 @@ function secondHighest(arr){
     arr = arr.sort(function(a,b){ return a-b });
     console.log(arr);
 }
-secondHighest([5,6,7,8,1,23,4]);
+//secondHighest([5,6,7,8,1,23,4]);
 
 ar = ["a","b","A","z","Z"];
-console.log(ar.sort(function(a,b){ return a-b }))
+//console.log(ar.sort(function(a,b){ return a-b }))
 
 //Given two arrays, 1,2,3,4,5 and 2,3,1,0,5 find which number is not present in the second array.
 function missing(a,b){
@@ -112,7 +112,7 @@ function missing(a,b){
 }
 
 
-missing([1,2,3,4,5], [2,3,1,0,5]);
+//missing([1,2,3,4,5], [2,3,1,0,5]);
 
 function missing2(a,b){
     for(let i = 0; i<= a.length-1;i++){
@@ -124,12 +124,7 @@ function missing2(a,b){
 
 }
 
-missing2([1,2,3,4,5], [2,3,1,0,5]);
-
-
-
-
-
+//missing2([1,2,3,4,5], [2,3,1,0,5]);
 
 //Find index of a given number
 
@@ -147,7 +142,7 @@ function idx(arr, target){
         console.log("Absent");
     }
 }
-idx([11,22,33,44,55,55,55], 55)
+//idx([11,22,33,44,55,55,55], 55)
 
 // How do you find second highest number in an integer array?
 
@@ -155,7 +150,7 @@ function secHigh(arr){
     arr.sort(function(a,b){ return(b-a) });
     console.log(arr[1])
 }
-secHigh([4,5,6,22,21,0,2])
+//secHigh([4,5,6,22,21,0,2])
 
 //count occurance of character
 
@@ -171,7 +166,7 @@ function counts(arr){
     }
     console.log(dict);
 }
-counts("aabbbcccd")
+//counts("aabbbcccd")
 
 // How to remove duplicate elements from array
 function removeDupli(str){
@@ -187,7 +182,7 @@ function removeDupli(str){
 }
 
 
-removeDupli("aabbccd")
+//removeDupli("aabbccd")
 
 
 function findCameelCaseWords(str){
@@ -201,7 +196,7 @@ function findCameelCaseWords(str){
     console.log(`Number of words are ${count+1}`)
 }
 
-findCameelCaseWords("myNameIs")
+//findCameelCaseWords("myNameIs")
 
 //How to find all pairs in array of integers whose sum is equal to given number?
 //Find duplicate in an array; Input:  [2,3,3,4,5,2]
@@ -234,9 +229,9 @@ function reverse(str){
     console.log(res.join(""));
 }
 
-reverse("abcd");
+//reverse("abcd");
 
-//copy arrays
+
 
 function copy(ar){
     var res = [];
@@ -250,20 +245,20 @@ function copy(ar){
     console.log(res)
 }
 
-copy([1,2,3,4]);
+//copy([1,2,3,4]);
 
 var anyString = 'Brave new world';
 
-console.log('The index of the first w from the beginning is ' + anyString.indexOf('o'));
+//console.log('The index of the first w from the beginning is ' + anyString.indexOf('o'));
 // logs 11
-console.log('The index of the last w from the beginning is ' + anyString.lastIndexOf('w'));
+//console.log('The index of the last w from the beginning is ' + anyString.lastIndexOf('w'));
 // logs 10
 
-console.log('The index of "new" from the beginning is ' + anyString.indexOf('new'));
+//console.log('The index of "new" from the beginning is ' + anyString.indexOf('new'));
 // logs 6
-console.log('The index of "new" from the end is ' + anyString.lastIndexOf('new'));
+//console.log('The index of "new" from the end is ' + anyString.lastIndexOf('new'));
 // logs 6
-console.log(['Blue','Whale'].indexOf('Whale'));
+//console.log(['Blue','Whale'].indexOf('Whale'));
 
 function sum(a, target){
     for(let i = 0; i<= a.length-1;i++){
@@ -276,4 +271,23 @@ function sum(a, target){
 
 }
 
-sum([1,2,3,4],5);
+//sum([1,2,3,4],5);
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>.Write a method which will remove any given character from a String?<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+function removeCharacter(string, target)
+{
+    var arr_string = Array.from(string)
+    for(let i = 0; i<arr_string.length; i++)
+    {
+        if(arr_string[i] === target)
+        {
+            arr_string[i] = "";
+            break;
+        }
+
+    }
+    console.log(arr_string.join(""))
+}
+
+removeCharacter("myname", "m")
