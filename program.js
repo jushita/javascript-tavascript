@@ -260,6 +260,8 @@ var anyString = 'Brave new world';
 // logs 6
 //console.log(['Blue','Whale'].indexOf('Whale'));
 
+
+//Find all the pairs whose sum equals to a target
 function sum(a, target){
     for(let i = 0; i<= a.length-1;i++){
         for(let j = i+1; j<=a.length-1;j++){
