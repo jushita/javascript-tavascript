@@ -219,7 +219,7 @@ function delChars(str1, str2){
 
 //delChars("cinema", "icemanzds");
 
-//reverse a strings
+//reverse a string
 function reverse(str){
     var res = [];
     str = Array.from(str);
@@ -249,7 +249,7 @@ function copy(ar){
 
 var anyString = 'Brave new world';
 
-//console.log('The index of the first w from the beginning is ' + anyString.indexOf('o'));
+//console.log('The index of the first o from the beginning is ' + anyString.indexOf('o'));
 // logs 11
 //console.log('The index of the last w from the beginning is ' + anyString.lastIndexOf('w'));
 // logs 10
@@ -290,4 +290,134 @@ function removeCharacter(string, target)
     console.log(arr_string.join(""))
 }
 
-removeCharacter("myname", "m")
+//removeCharacter("myname", "m")
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>How to find first non repeated character of a given String?<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//var sorted_string = Array.from(string.split('').sort().join(''));
+
+function nonRepChar(string){
+  var dict = {};
+  var value;
+  for (let i = 0; i<=string.length-1;i++){
+      if (dict[string[i]] == undefined){
+          dict[string[i]] = 1;
+      }
+      else {
+          dict[string[i]]++;
+      }
+  }
+  for(let key in dict){
+      if (dict[key] == 1) {
+          console.log(key)
+          break;
+      }
+  }
+
+}
+
+//nonRepChar("aabbbcdddz");
+
+
+/*************In an array 1-100 numbers are stored, one number is missing how do you find it?*************/
+function missingNumsInList(givenArr){
+    var n = 10;
+    var givenNum = 0;
+    var res = (n * (n+1)) / 2;
+    for(let i = 0; i <=givenArr.length - 1; i++){
+        givenNum = givenNum + givenArr[i];
+    }
+    console.log(givenNum - res);
+}
+//missingNumsInList([1,2,3,4,5,6,7,8,9,2,10]);
+
+/*************In an array 1-100 exactly one number is duplicate how do you find it?*************/
+function findDuplicateInArray(array){
+    var dict = {};
+    for(let i = 0; i<=array.length - 1; i++){
+        if(dict[array[i]] == undefined){
+            dict[array[i]] = 1;
+        }
+        else{
+            dict[array[i]]++;
+        }
+    }
+    for (let key in dict){
+        if(dict[key] == 2){
+            console.log(key);
+        }
+    }
+
+}
+
+//findDuplicateInArray([1,2,3,3,4,5,6,7,8])
+
+function absentNum(a,b){
+    for(let i = 0; i <= a.length -1; i++){
+        if (a.indexOf(b[i]) == -1){
+            console.log(b[i])
+        }
+    }
+}
+//absentNum([1,2,3,4,5],[2,3,1,0,5])
+
+function allPairs(arr, target){
+    sorted_arr = arr.sort(function(a,b){ return(a-b) });
+    res = [];
+    for(let i = 0; i<= arr.length-1;i++){
+        for (let j = i+1; j < arr.length; j++) {
+            if (arr[i] + arr[j] == target){
+                res.push([arr[i], arr[j]]);
+            }
+        }
+    }
+    console.log(res);
+}
+
+//allPairs([2, 4, 3, 5, 6, -2, 4, 7, 8, 9], 7)
+
+
+
+/*************How to remove duplicate elements from array in Java?*************/
+
+function duplicateElements(arr){
+    var dict = {};
+    var res = [];
+    for(let i = 0; i <= arr.length -1; i++){
+        dict[arr[i]] = 0;
+    }
+    for(let key in dict){
+        res.push(key);
+
+    }
+    console.log((res).join(''))
+}
+
+//duplicateElements([1,2,3,4,1,2,2])
+
+function isArmstrong(number){
+    var sum = 0;
+    var str_number = number.toString();
+    var arr_number = Array.from(str_number);
+    for(let i = 0; i<= arr_number.length-1;i++){
+        sum = sum + (Math.pow(parseInt(arr_number[i]), arr_number.length));
+    }
+    if(number === sum){
+        return(number);
+    }
+
+}
+//console.log(isArmstrong(371));
+
+function isArmstrongInRange(start, end){
+    for (let i = start; i<= end; i++){
+        if (isArmstrong(i) !== undefined){
+            console.log(i)
+        }
+
+    }
+}
+
+isArmstrongInRange(1,9999)
+
+function reversed(string){
+
+}
