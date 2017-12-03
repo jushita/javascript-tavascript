@@ -42,13 +42,14 @@ Output: 1 4, 2 3
 18. Find the Armstrong's number in a given list
 
 
-##leetcode.js
+## leetcode.js
 
 This file contains solution to problems from Leetcode. (https://leetcode.com/problemset/top-interview-questions/)
 
-###Problems:
+### Problems:
 1. Given an array of integers, every element appears twice except for one. Find that single one.
 ```
 Input: [1,1,2,2,3,3,4]
 Output: 4
 ```
+2. Given an array of integers, every element appears twice except for one. Find that single one without using extra memory.
