@@ -67,7 +67,7 @@ Return:
     "Fizz",
     "4",
     "Buzz",
-    "Fizz",
+    "Fizz",s
     "7",
     "8",
     "Fizz",
@@ -78,4 +78,11 @@ Return:
     "14",
     "FizzBuzz"
 ]
-``
+```
+4. Write a function that takes a string as input and returns the string reversed.
+```
+Example:
+Given s = "hello", return "olleh".
+```
+5. Given a binary tree, find its maximum depth.
+The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
