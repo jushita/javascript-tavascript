@@ -86,3 +86,10 @@ Given s = "hello", return "olleh".
 ```
 5. Given a binary tree, find its maximum depth.
 The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+6. Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+```
+Example:
+input: nums = [0,1,0,3,12]
+output: [1, 3, 12, 0, 0]
+```
+7. 7. Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements. Not in place.

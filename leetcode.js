@@ -78,14 +78,53 @@ function Reverse(str){
     res = res.join("");
     return res;
 }
-console.log(Reverse("hello"));
+//console.log(Reverse("hello"));
 
 
 //5. Maximum Depth of Binary tree
 
-fucntion maxDepth(root){
+function maxDepth(root){
     if(root === null){
         return 0;
     }
     return(1+Math.max(maxDepth(root.left), maxDepth(root.right)));
 }
+
+
+//6. Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+function moveZeros(nums){
+    var count = 0;
+    n = nums.length
+    for(let i = 0; i <= n-1; i++){
+        if(nums[i] != 0){
+            nums[count++] = nums[i];
+
+        }
+    }
+    while (count < n){
+        nums[count++] = 0
+    }
+    console.log(nums);
+}
+
+//moveZeros([0,1,0,2,13]);
+
+
+//7. Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
+//not in place
+function moveZeros_2(nums){
+    var res = []
+    for(let i = 0; i <= nums.length - 1; i++){
+        if (nums[i] != 0){
+            res.push(nums[i])
+        }
+    }
+    for (let i = 0; i<=nums.length - 1; i++){
+        if (nums[i] == 0){
+            res.push(nums[i])
+        }
+    }
+
+    console.log(res)
+}
+moveZeros_2([0,1,0,2,13]);

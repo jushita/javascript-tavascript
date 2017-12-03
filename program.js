@@ -64,7 +64,8 @@ function countOccurance(str){
     for(let i = 0; i<str.length; i++){
         if(dict[str[i]] == undefined) {
             dict[str[i]] = 1;
-        } else {
+        }
+        else {
             dict[str[i]]++;
         }
     }
