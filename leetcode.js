@@ -189,3 +189,32 @@ function isAnargram(s, t){
     }
 }
 //console.log(isAnargram("abcd", "abcd"));
+
+//11. Given an array of integers, find if the array contains any duplicates. Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+
+function containsDuplicate(nums){
+    dict = {};
+    result = true;
+    for(let i = 0; i <= nums.length - 1; i++){
+        if (dict[nums[i]] == undefined){
+            dict[nums[i]] = 1;
+        }
+        else{
+            dict[nums[i]]++;
+        }
+    }
+    for(let key in dict){
+        if(dict[key] != 1){
+            result = false;
+        }
+    }
+    return (result);
+}
+//console.log(containsDuplicate([1,1,2,3,4,5]));
+
+function intersect (nums1, nums2){
+
+}
+
+
+//12. Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
