@@ -291,3 +291,42 @@ function isPowerOfThree(n){
 }
 
 //isPowerOfThree(27)
+
+//16. Write a function that takes an unsigned integer and returns the number of ’1' bits it has
+
+function hammingWeight(n){
+    var res = 0;
+    for(let i = n; i !== 0; ){
+        if(i%2 === 1){
+            res++;
+        }
+        i = parseInt(i/2);
+    }
+    return (res);
+}
+//console.log(hammingWeight(3))
+
+//17. Count the number of prime numbers less than a non-negative number, n.
+
+function primes(n){
+    if (n < 2){
+        return(false);
+    }
+    for(let i = 2; i < n; i++){
+        if(n%i == 0){
+            return(false);
+        }
+    }
+    return(true);
+}
+
+function countPrimes(n){
+    var count = 0;
+    for(let i = 0; i <= n - 1; i++){
+        if(primes(i) == true){
+            count++;
+        }
+    }
+    console.log(count);
+}
+countPrimes(20)
