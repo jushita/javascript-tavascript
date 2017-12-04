@@ -235,4 +235,59 @@ function missingNumber(nums){
     console.log(`Missing number is ${result}`);
 }
 
-missingNumber([9,6,4,2,3,5,7,0,1]);
+//missingNumber([9,6,4,2,3,5,7,0,1]);
+
+//13. Write an algorithm to determine if a number is "happy". A happy number is a number defined by the following process:
+//Starting with any positive integer, replace the number by the sum of the squares of its digits,
+//and repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
+//Those numbers for which this process ends in 1 are happy numbers. 19
+
+function isHappy(n){
+    if(n == 1) {
+        return console.log('Happy number found!');
+    }
+    var sum = 0;
+    var arr_n = Array.from(n.toString());
+    for(let i = 0; i <= arr_n.length - 1; i++){
+        sum += Math.pow(arr_n[i], 2);
+    }
+    isHappy(sum);
+
+}
+
+//isHappy(82)
+/*
+14. You are climbing a stair case. It takes n steps to reach to the top.
+
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+Note: Given n will be a positive integer.
+*/
+var fib = function(n) {
+    if(n<=1) {
+        return n;
+    }
+    return fib(n-1) + fib(n-2)
+}
+
+var climbStairs = function(n) {
+    return fib(n + 1)
+};
+
+//console.log(climbStairs(11));
+
+//15.  Given an integer, write a function to determine if it is a power of three.
+
+function isPowerOfThree(n){
+    if (n == 1){
+        return (console.log("Power of 3"));
+    }
+    if (n%3 != 0){
+        return (console.log("Not a power of 3"));
+    }
+
+    n = n/3;
+    isPowerOfThree(n)
+}
+
+//isPowerOfThree(27)
