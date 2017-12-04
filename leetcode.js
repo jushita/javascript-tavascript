@@ -150,3 +150,26 @@ function majorityElement(nums){
     }
 }
 majorityElement([1,1,1,1,1,1,2,3,4,4,4,4,3,3,1,1,])
+//9. Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
+
+function firstUniqChar(string){
+    var string_arr = Array.from(string);
+    var dict = {};
+    for(let i = 0; i <= string.length - 1; i++){
+        if(dict[string[i]] == undefined){
+            dict[string[i]] = 1;
+        }
+        else{
+            dict[string[i]] ++;
+        }
+    }
+    for(let key in dict){
+        if (dict[key] == 1){
+            return (`The index of the first non-repeating character is: ${string.indexOf(key)}`);
+            break;
+        }
+
+    }
+    return (-1)
+}
+console.log(firstUniqChar("loveleetcode"));
