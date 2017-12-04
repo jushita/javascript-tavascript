@@ -127,4 +127,26 @@ function moveZeros_2(nums){
 
     console.log(res)
 }
-moveZeros_2([0,1,0,2,13]);
+//moveZeros_2([0,1,0,2,13]);
+
+//8. Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
+
+function majorityElement(nums){
+    var n = nums.length;
+    var dict = {};
+    for(let i = 0; i<= n-1; i++){
+        if (dict[nums[i]] == undefined){
+            dict[nums[i]] = 1;
+        }
+        else{
+            dict[nums[i]] ++;
+        }
+    }
+    for(let key in dict){
+        if (dict[key] >= Math.floor(n/2)){
+            console.log(`The Majority Number is ${key}`);
+            break;
+        }
+    }
+}
+majorityElement([1,1,1,1,1,1,2,3,4,4,4,4,3,3,1,1,])
