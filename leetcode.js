@@ -329,4 +329,27 @@ function countPrimes(n){
     }
     console.log(count);
 }
-countPrimes(20)
+//countPrimes(20)
+
+// 18. Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+
+function isPallindrom(str){
+    str = str.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,""); //removes all punctuations
+    str = str.replace(/\s+/g, ""); //removes all white spaces
+    str = str.toLowerCase();
+    var reverse_str = [];
+    arr_str = Array.from(str);
+    for(let i = arr_str.length - 1; i >= 0; i--){
+        reverse_str.push(arr_str[i]);
+    }
+    if(arr_str.join('') === reverse_str.join('')){
+        return(console.log("Yes Pallindrom"));
+    }
+    else{
+        return(console.log("Not a Pallindrom"));
+    }
+
+}
+
+
+isPallindrom("A man, a plan, a canal: Panama");
