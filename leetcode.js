@@ -218,3 +218,21 @@ function intersect (nums1, nums2){
 
 
 //12. Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
+
+function missingNumber(nums){
+    var n = nums.length;
+    nums  = nums.sort(function(a,b){return(b-a)});
+    var highest = nums[0];
+    var total_sum = 0;
+    var sum = 0;
+    for (let i = 0; i<=highest; i++){
+        total_sum += i;
+    }
+    for (let i = 0; i<= nums.length-1; i++){
+        sum = sum + nums[i];
+    }
+    var result = total_sum-sum;
+    console.log(`Missing number is ${result}`);
+}
+
+missingNumber([9,6,4,2,3,5,7,0,1]);
