@@ -149,7 +149,7 @@ function majorityElement(nums){
         }
     }
 }
-majorityElement([1,1,1,1,1,1,2,3,4,4,4,4,3,3,1,1,])
+//majorityElement([1,1,1,1,1,1,2,3,4,4,4,4,3,3,1,1,])
 //9. Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
 
 function firstUniqChar(string){
@@ -172,4 +172,20 @@ function firstUniqChar(string){
     }
     return (-1)
 }
-console.log(firstUniqChar("loveleetcode"));
+//console.log(firstUniqChar("loveleetcode"));
+
+// 10. Given two strings s and t, write a function to determine if t is an anagram of s.
+
+function isAnargram(s, t){
+    s = Array.from(s)
+    t = Array.from(t)
+    s = s.sort().join("");
+    t = t.sort().join("");
+    if (s == t){
+        return(true);
+    }
+    else{
+        return(false);
+    }
+}
+//console.log(isAnargram("abcd", "abcd"));

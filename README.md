@@ -95,3 +95,9 @@ output: [1, 3, 12, 0, 0]
 7. 7. Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements. Not in place.
 8. Given an array of size n, find the majority element. The majority element is the element that appears more than ⌊ n/2 ⌋ times.
 9. Given a string, find the first non-repeating character in it and return it's index. If it doesn't exist, return -1.
+10. Given two strings s and t, write a function to determine if t is an anagram of s. Given two strings s and t, write a function to determine if t is an anagram of s.
+```
+For example,
+s = "anagram", t = "nagaram", return true.
+s = "rat", t = "car", return false.
+```
