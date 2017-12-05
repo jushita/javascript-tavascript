@@ -125,3 +125,15 @@ Example: 19 is a happy number
 14. You are climbing a stair case. It takes n steps to reach to the top.
 Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 15. Given an integer, write a function to determine if it is a power of three.
+16. 16. Write a function that takes an unsigned integer and returns the number of ’1' bits it has
+```
+For example, the 32-bit integer ’11' has binary representation 00000000000000000000000000001011, so the function should return 3.
+```
+17. Count the number of prime numbers less than a non-negative number, n.
+18. Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+```
+For example,
+"A man, a plan, a canal: Panama" is a palindrome.
+"race a car" is not a palindrome.
+```
+19. 
