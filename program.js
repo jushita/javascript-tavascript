@@ -419,4 +419,17 @@ function isArmstrongInRange(start, end){
     }
 }
 
-isArmstrongInRange(1,9999)
+//isArmstrongInRange(1,9999)
+
+//the sky is blue --> blue is sky
+
+function reverseWords(string){
+    splitted_string = string.split(" ");
+    result = [];
+    for (let i = splitted_string.length - 1; i >= 0; i--){
+        result.push(splitted_string[i]);
+    }
+    console.log(result.join(" "));
+}
+
+reverseWords("The sky is blue");
