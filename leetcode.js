@@ -352,4 +352,40 @@ function isPallindrom(str){
 }
 
 
-isPallindrom("A man, a plan, a canal: Panama");
+//isPallindrom("A man, a plan, a canal: Panama");
+
+// 19. Given a 32-bit signed integer, reverse digits of an integer.
+function removeZeros(num){
+    arr_num = Array.from(num.toString());
+    if (arr_num[arr_num.length - 1] != '0'){
+        return num;
+    }
+
+    arr_num.pop();
+    new_num = parseInt(arr_num.join(''));
+    return removeZeros(new_num);
+}
+//console.log(removeZeros(12300));
+
+
+function _reverse(num){
+    if (isNaN(num)){
+        return console.log("ERROR");
+    }
+
+    nums = removeZeros(num);
+    var arr_num = Array.from(nums.toString());
+    var rev_num = [];
+
+    for(let i = arr_num.length - 1; i >= 0; i--){ 
+        rev_num.push(arr_num[i]);
+    }
+    if(rev_num[arr_num.length - 1] == '-'){
+        rev_num.pop();
+        rev_num.unshift('-')
+    }
+    console.log(rev_num.join(''));
+
+}
+
+_reverse("asd")
