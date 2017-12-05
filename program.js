@@ -420,7 +420,3 @@ function isArmstrongInRange(start, end){
 }
 
 isArmstrongInRange(1,9999)
-
-function reversed(string){
-
-}

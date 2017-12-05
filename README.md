@@ -151,3 +151,15 @@ Example 3:
 Input: 120
 Output: 21
 ```
+20. Given a string, your task is to count how many palindromic substrings in this string.
+```
+Example 1:
+Input: "abc"
+Output: 3
+Explanation: Three palindromic strings: "a", "b", "c".
+
+Example 2:
+Input: "aaa"
+Output: 6
+Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
+```

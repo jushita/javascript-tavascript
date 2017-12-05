@@ -377,7 +377,7 @@ function _reverse(num){
     var arr_num = Array.from(nums.toString());
     var rev_num = [];
 
-    for(let i = arr_num.length - 1; i >= 0; i--){ 
+    for(let i = arr_num.length - 1; i >= 0; i--){
         rev_num.push(arr_num[i]);
     }
     if(rev_num[arr_num.length - 1] == '-'){
@@ -388,4 +388,35 @@ function _reverse(num){
 
 }
 
-_reverse("asd")
+//_reverse(-12300)
+function Pallindrom(str){
+    var arr_str = Array.from(str);
+    var rev_str = [];
+    for(let i = arr_str.length - 1; i>= 0; i--){
+        rev_str.push(arr_str[i]);
+    }
+    if (rev_str.join('') == str){
+        return true;
+    }
+}
+Pallindrom("cat");
+
+function countSubstrings(s){
+    var result = [];
+    var count = 0;
+    for (let i = 0; i <= s.length - 1; i++){
+        for (let j = i + 1; j <= s.length; j++){
+            result.push(s.slice(i,j));
+        }
+    }
+
+    console.log(result)
+    for(let i = 0; i <= result.length - 1; i++){
+        if (Pallindrom(result[i])) {
+            count++;
+        }
+    }
+    return (console.log(count));
+}
+
+countSubstrings("aaa");
