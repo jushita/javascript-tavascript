@@ -389,6 +389,9 @@ function _reverse(num){
 }
 
 //_reverse(-12300)
+
+
+//20. Given a string, your task is to count how many palindromic substrings in this string.
 function Pallindrom(str){
     var arr_str = Array.from(str);
     var rev_str = [];
