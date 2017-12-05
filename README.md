@@ -40,6 +40,8 @@ Output: 1 4, 2 3
 16. In an array 1-100 numbers are stored, one number is missing how do you find it
 17. Find if a number is Armstrong's number or not
 18. Find the Armstrong's number in a given list
+19. the sky is blue --> blue is sky
+20. Given two strings delete all characters to make it anagrams.
 
 
 ## leetcode.js

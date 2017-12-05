@@ -433,3 +433,36 @@ function reverseWords(string){
 }
 
 reverseWords("The sky is blue");
+
+//Given two strings delete all characters to make it anagrams.
+function delChartoMakeAnargrams(str1,str2){
+    var arr_str1 = Array.from(str1).sort();
+    var arr_str2 = Array.from(str2).sort();
+    var delChar = []
+    var dict_1 = {};
+    var dict_2 = {};
+    for(let i = 0; i <= arr_str1.length - 1; i++){
+        dict_1[arr_str1[i]] = 1;
+    }
+    for(let i = 0; i <= arr_str2.length - 1; i++){
+        dict_2[arr_str2[i]] = 1;
+    }
+    for(let key1 in dict_1){
+        for(let key2 in dict_2){
+            if (key1 == key2){
+                dict_2[key2]++;
+            }
+        }
+    }
+    for(let key in dict_2){
+        if(dict_2[key] != 2){
+            delChar.push(arr_str2.splice(arr_str2.indexOf(key),1).toString());
+        }
+    }
+    console.log(delChar)
+}
+delChartoMakeAnargrams('iceman','cinema');
+
+
+var test = ["1","2","3"];
+test.splice()
