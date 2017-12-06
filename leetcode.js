@@ -442,6 +442,8 @@ function productExceptSelf(nums){
 //productExceptSelf([1,2,3,4])
 
 
+//22. Given a non-empty array of integers, return the k most frequent elements.
+
 function topKFrequent(arr, k){
     // get length
     const arrLength = arr.length;
@@ -480,4 +482,29 @@ function topKFrequent(arr, k){
 
     console.log(results);
 }
-topKFrequent([1,1,1,1,2,2,3,8,8,8,7,7,7,4,4], 3)
+//topKFrequent([1,1,1,1,2,2,3,8,8,8,7,7,7,4,4], 3)
+
+//23, Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist.
+//Assume that there is only one duplicate number, find the duplicate one.
+
+
+function findDuplicate(nums){
+    var obj_nums = {};
+    for(let i = 0; i <= nums.length-1; i++){
+        if(obj_nums[nums[i]] == undefined){
+            obj_nums[nums[i]] = 1;
+        }
+        else{
+            obj_nums[nums[i]]++;
+        }
+    }
+    for(let key in obj_nums){
+        if(obj_nums[key] >= 2){
+            console.log(`${key} is the duplicate`);
+        }
+
+
+    }
+}
+
+findDuplicate([1,1,2,3,4,5,67,9]);
