@@ -402,7 +402,7 @@ function Pallindrom(str){
         return true;
     }
 }
-Pallindrom("cat");
+//Pallindrom("cat");
 
 function countSubstrings(s){
     var result = [];
@@ -422,4 +422,21 @@ function countSubstrings(s){
     return (console.log(count));
 }
 
-countSubstrings("aaa");
+//countSubstrings("aaa");
+
+//21. Given an array of n integers where n > 1, nums, return an array output such that output[i] is equal to the product of all the elements of nums except nums[i].
+
+
+function productExceptSelf(nums){
+    var result = [];
+    var product = 1;
+    for(let i = 0; i <= nums.length - 1;i++){
+        product *= nums[i]
+    }
+    for(let i = 0; i <= nums.length - 1; i++){
+        result.push(product/nums[i])
+
+    }
+    console.log(result)
+}
+productExceptSelf([1,2,3,4])
