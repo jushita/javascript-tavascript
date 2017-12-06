@@ -439,4 +439,45 @@ function productExceptSelf(nums){
     }
     console.log(result)
 }
-productExceptSelf([1,2,3,4])
+//productExceptSelf([1,2,3,4])
+
+
+function topKFrequent(arr, k){
+    // get length
+    const arrLength = arr.length;
+
+    // find occurance of each
+    var occObj = {};
+    for(let i = 0; i <= arr.length -1; i++){
+        if(occObj[arr[i]] == undefined){
+            occObj[arr[i]] = 1;
+        }
+        else{
+            occObj[arr[i]]++;
+        }
+    }
+
+    // find what percentage of the length each element occupies
+    // [percentage, num]
+    var resArr = [];
+    for(i in occObj) {
+        if(occObj.hasOwnProperty(i)) {
+            //calculate percentage
+            resArr.push([Math.floor((occObj[i]/arrLength)*100), i])
+        }
+    }
+
+    // sort array by first element
+    resArr = resArr.sort((a, b) => {
+        return b[0] - a[0];
+    });
+
+    // return k amount of elements
+    var results = [];
+    for(let i=0; i<k; i++) {
+        results.push(resArr[i][1]);
+    }
+
+    console.log(results);
+}
+topKFrequent([1,1,1,1,2,2,3,8,8,8,7,7,7,4,4], 3)
