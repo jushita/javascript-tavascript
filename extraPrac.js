@@ -73,8 +73,7 @@ function binNum(num){
 //Write function to compute Nth Fibonacci number? Both iterative and recursive?
 
 function fibo(n){
-    var fibo1 = 0;
-    var fibo2 = 1;
+
     var fiboSeries = [0,1];
     for(let i = 0 ; i<=n-3; i++){
         next = fiboSeries[i] +fiboSeries[i+1];
@@ -83,7 +82,15 @@ function fibo(n){
     console.log(fiboSeries);
 }
 //fibo(6)
+function fibonacci(num) {
+  var memo = memo || {};
 
+  if (memo[num]) return memo[num];
+  if (num <= 1) return 1;
+
+  return memo[num] = fibonacci(num - 1, memo) + fibonacci(num - 2, memo);
+}
+console.log(fibonacci(7))
 
 function ltwo(nums){
     var res = 0;
@@ -127,14 +134,30 @@ function leight(nums){
 }
 
 function lthirteen(s){
-    if(s == 1){
+    if (s == 1){
         return ("Happy number found");
     }
     var nums = 0;
     var arr_n = Array.from(s.toString());
-    for(let i = 0; i <=arr_n.length-1; i++){
+    for (let i = 0; i <=arr_n.length-1; i++){
         nums += Math.pow(parseInt(arr_n[i]), 2)
     }
     return lthirteen(nums);
 }
 console.log(lthirteen(19));
+
+function fibo(n){
+    if(n<=1){
+        return n;
+    }
+    return (fibo(n-1)+(n-2));
+}
+
+function fiboSeries(s){
+    var result = [];
+    for(let i = 0; i <= s.length - 1; i++){
+        result.push(fibo(i));
+    }
+    console.log(`Here is the fibo series ${result}`);
+}
+fiboSeries(3)

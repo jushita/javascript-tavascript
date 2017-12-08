@@ -314,7 +314,7 @@ console.log(`No. of 1 bits is ${hammingWeight(4)}`)
 //17. Count the number of prime numbers less than a non-negative number, n.
 
 function primes(n){
-    if (n >1 && n < 2){
+    if (n >=1 && n <= 2){
         return(false);
     }
     for(let i = 2; i < n; i++){
