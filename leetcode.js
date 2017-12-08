@@ -279,7 +279,7 @@ var climbStairs = function(n) {
     return fib(n + 1)
 };
 
-//console.log(climbStairs(11));
+console.log(`No. of ways to climb ${climbStairs(7)}`);
 
 //15.  Given an integer, write a function to determine if it is a power of three.
 
@@ -309,7 +309,7 @@ function hammingWeight(n){
     }
     return (res);
 }
-//console.log(hammingWeight(3))
+console.log(`No. of 1 bits is ${hammingWeight(4)}`)
 
 //17. Count the number of prime numbers less than a non-negative number, n.
 

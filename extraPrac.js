@@ -92,7 +92,7 @@ function ltwo(nums){
     }
     console.log(res)
 }
-ltwo([9,8,6,3,6,8,9]);
+//ltwo([9,8,6,3,6,8,9]);
 
 function lsix(nums){
     var count = 0;
@@ -100,5 +100,41 @@ function lsix(nums){
         if(nums[0] != 0){
             nums[count++] = nums[i];
         }
-
+    }
+    while(count < n){
+        nums[count++] = 0;
+    }
+    console.log(nums)
 }
+
+function leight(nums){
+    var n = nums.length
+    var dict = {};
+    for(let i = 0; i <= n-1; i++){
+        if(dict[nums[i]] == undefined){
+            dict[nums[i]] = 1;
+        }
+        else{
+            dict[nums[i]]++;
+        }
+    }
+    for(let key in dict){
+        if (dict[key] >= Math.floor(n/2)){
+            console.log(key);
+            break;
+        }
+    }
+}
+
+function lthirteen(s){
+    if(s == 1){
+        return ("Happy number found");
+    }
+    var nums = 0;
+    var arr_n = Array.from(s.toString());
+    for(let i = 0; i <=arr_n.length-1; i++){
+        nums += Math.pow(parseInt(arr_n[i]), 2)
+    }
+    return lthirteen(nums);
+}
+console.log(lthirteen(19));
