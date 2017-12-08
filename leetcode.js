@@ -309,7 +309,7 @@ function hammingWeight(n){
 //17. Count the number of prime numbers less than a non-negative number, n.
 
 function primes(n){
-    if (n < 2){
+    if (n >1 && n < 2){
         return(false);
     }
     for(let i = 2; i < n; i++){
@@ -508,3 +508,17 @@ function findDuplicate(nums){
 }
 
 findDuplicate([1,1,2,3,4,5,67,9]);
+
+
+
+function substringzzz(s){
+    var result = [];
+    for (let i = 0; i <= s.length - 1; i++){
+        for (let j = i + 1; j <= s.length; j++){
+            result.push(s.slice(i,j));
+        }
+    }
+    console.log(result);
+}
+
+substringzzz("abc")

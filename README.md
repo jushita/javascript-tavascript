@@ -4,11 +4,11 @@
 This file contain problems that help to understand the language's syntax better
 
 ### Problems:
-1. Check if a string is anargram or not
+1. Check if a string is anagram or not
 2. Reverse a string
-3. Check if a string is pallindrom or not (with in-built function)
-4. Check if a string is pallindrom or not (without in-bult function)
-5. Count occurance of characters in a string
+3. Check if a string is palindrome or not (with in-built function)
+4. Check if a string is palindrome or not (without in-built function)
+5. Count occurrence of characters in a string
 6. Remove a particular character from a string
 7. How do you find second highest number in an integer array?
 8. Given two arrays, 1,2,3,4,5 and 2,3,1,0,5 find which number is not present in the second array.
@@ -177,7 +177,7 @@ Given [1,1,1,2,2,3] and k = 2, return [1,2].
 ```
 23. Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. Assume that there is only one duplicate number, find the duplicate one.
 
-- Note:
+* Note:
 - You must not modify the array (assume the array is read only).
 - You must use only constant, O(1) extra space.
 - Your runtime complexity should be less than O(n2).
