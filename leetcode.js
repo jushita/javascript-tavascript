@@ -35,11 +35,11 @@ function singleNumber_2(nums){
         num ^= nums[i];
     }
 
-    console.log (num);
+    console.log (`thsi is single ${num}`);
 
 }
 
-//singleNumber_2([9,8,6,3,6,8,9])
+singleNumber_2([9,8,6,3,6,8,9])
 
 
 //3. Write a program that outputs the string representation of numbers from 1 to n.
@@ -213,9 +213,14 @@ function containsDuplicate(nums){
 //console.log(containsDuplicate([1,1,2,3,4,5]));
 
 function intersect (nums1, nums2){
+    for(let i = 0; i<= nums1.length-1; i++){
+        if(nums2.indexOf(nums1[i]) != -1){
+            console.log(nums1[i]);
+        }
+    }
 
 }
-
+intersect([1,2,2,3,4,5],[2,2])
 
 //12. Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
 
@@ -507,7 +512,7 @@ function findDuplicate(nums){
     }
 }
 
-findDuplicate([1,1,2,3,4,5,67,9]);
+//findDuplicate([1,1,2,3,4,5,67,9]);
 
 
 
@@ -521,4 +526,4 @@ function substringzzz(s){
     console.log(result);
 }
 
-substringzzz("abc")
+//substringzzz("abc")
