@@ -1,5 +1,20 @@
 # Javascript Interview Problems
 
+## sets.js
+Implement Set and its functions 
+
+## maps.js
+Implement Map and its functions
+
+## stack.js
+Implement Stack and its functions
+
+## queue.js
+Implement Queue and its functions
+
+## linkedlist.js
+Implement Linked List and its functions
+
 ## program.js
 This file contain problems that help to understand the language's syntax better
 

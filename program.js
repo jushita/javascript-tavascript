@@ -468,26 +468,8 @@ function delChartoMakeAnargrams(str1,str2){
         if(dict_2[key] == 1){
             delChar.push(arr_str2.splice(arr_str2.indexOf(key),1).toString());
         }
-        else if {
-            //if dict_2[key] >= 3----> push key in delChar (dict_2[key]-2) times.
-
-
-        }
-    }
     console.log(dict_2)
     console.log(delChar)
 }
 delChartoMakeAnargrams('iceman','cinemazaaa');
-
-function delChartoMakeAnargrams_2(str1, str2){
-    var res = [];
-    var arr_str1 = Array.from(str1).sort();
-    var arr_str2 = Array.from(str2).sort();
-    for(let i = 0; i<=arr_str2.length-1; i++){
-        if(arr_str1.indexOf(arr_str2[i]) == -1){
-            res.push(arr_str2[i]);
-        }
-    }
-    console.log(res)
 }
-//delChartoMakeAnargrams_2('iceman','cinemaxyz')
