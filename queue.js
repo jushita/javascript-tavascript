@@ -3,27 +3,38 @@ class Queue {
     constructor() {
         this._queue = {};
         this.count = 0;
+        this.start = 0;
+
     };
 
     get() {
         return this._queue;
     }
     
-    push(value) {
+    enqueue(value) {
         this._queue[this.count] = value;
         this.count++;
     }
 
-    pop() {
+    dequeue() {
+        if (this.count === 0) {
+            return undefined;
+        }
+        let result = this._queue[this.start];
+        delete this._queue[this.start];
+        this.start++;
+        this.count--;
+        return result; 
+    };
+
+    peek() {
         if (this.count === 0) {
             return undefined;
         }
         let key = (Object.keys(this._queue))[0]
         let result = this._queue[key];
-        delete this._queue[key];
-        this.count--;
-        return result; 
-    };
+        return result;
+    }
 
     empty() {
         this._queue = {};
@@ -36,11 +47,11 @@ class Queue {
 }
 
 const queue = new Queue();
-queue.push('start');
-queue.push('mid');
-queue.push('last');
-queue.pop();
-queue.pop();
-queue.pop();
-queue.pop();
-console.log(queue);
+queue.enqueue('start');
+queue.enqueue('mid');
+queue.enqueue('last');
+queue.dequeue();
+queue.dequeue();
+queue.dequeue();
+console.log(queue.get());
+console.log(queue.size());

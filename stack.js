@@ -15,9 +15,17 @@ class Stack {
             return undefined;
         }
         this.count--
-        let result = this._stack[this._stack[this.count]];
+        let result = this._stack[this.count];
         delete this._stack[this.count];
         return  result;
+    }
+
+    peek() {
+        if(this.count === 0) {
+            return undefined;
+        }
+        return this._stack[this.count - 1];
+
     }
 
     empty() {
@@ -38,6 +46,7 @@ const stack = new Stack();
 stack.push('start');
 stack.push('mid');
 stack.push('end');
-stack.pop()
-stack.pop()
+console.log(stack.peek());
+console.log(stack.pop());
+
 console.log(stack)
