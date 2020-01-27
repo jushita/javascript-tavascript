@@ -14,7 +14,7 @@ class Stack {
         if(this.count === 0) {
             return undefined;
         }
-        this.count--
+        this.count--;
         let result = this._stack[this.count];
         delete this._stack[this.count];
         return  result;
@@ -50,3 +50,5 @@ console.log(stack.peek());
 console.log(stack.pop());
 
 console.log(stack)
+
+module.export.Stack;
