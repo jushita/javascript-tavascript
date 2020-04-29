@@ -50,8 +50,5 @@ const queue = new Queue();
 queue.enqueue('start');
 queue.enqueue('mid');
 queue.enqueue('last');
-queue.dequeue();
-queue.dequeue();
-queue.dequeue();
 console.log(queue.get());
 console.log(queue.size());

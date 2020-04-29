@@ -4,15 +4,17 @@ class Node {
         this.next = next;
     }
 }
-
+// ITS BROKEN :(
 class LinkedList {
     constructor() {
         this.head = null;
+        this.tail = null;
         this.size = 0;
     }
 
     insertFirst(element) {
         this.head = new Node(element, this.head);
+        this.tail = this.head;
         this.size++;
     }
     // add element to end of list
@@ -38,7 +40,7 @@ class LinkedList {
         let current;
         let previous;
 
-        if (index < 0 || index > this.size - 1) {
+        if (index < 0 || index > this.size) {
             return;
         }
 
@@ -121,9 +123,30 @@ class LinkedList {
             console.log(result)
         }
     }
+
+    insertLast2(element) {
+        let node = new Node(element);
+        if(!this.head) {
+            this.head = node;
+            this.tail = node;
+        } else {
+            this.tail.next = node;
+            this.tail = node;
+        }
+        this.size++;
+
+
+    }
 }
 
 const ll = new LinkedList();
 
-ll.insertAt(99.5, -1)
+ll.insertFirst(99.5)
+ll.insertLast2(2)
+ll.insertLast2(1)
+ll.insertFirst(0)
+ll.insertAt(22, 1)
+ll.insertAt(9999, 5)
+ll.insertLast2(8)
 ll.printList()
+

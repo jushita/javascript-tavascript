@@ -14,4 +14,5 @@ const child4 = new Node('Child4');
 root.children.push(child1);
 child1.children.push(child2, child3, child4)
 
-console.log(child1)
+console.log(root)
+
