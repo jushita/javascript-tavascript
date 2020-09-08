@@ -100,7 +100,7 @@ function lengthOfLargestSubstring(s) {
 }
 
 
-//console.log(lengthOfLargestSubstring("pwwkew"));
+console.log(lengthOfLargestSubstring("pwwkew"));
 
 var lengthOfLongestSubstringTwoDistinct = function(s) {
     let leftWindow = 0;
@@ -166,4 +166,21 @@ function arrVal(arr, nums) {
     }
     return res;
 }
-console.log(maxSlidingWindow([1,3,-1,-3,5,3,6,7], 3))
+//console.log(maxSlidingWindow([1,3,-1,-3,5,3,6,7], 3))
+
+
+
+
+
+
+
+function singleNum(arr) {
+    let num;
+    for(let i = 0; i< arr.lenght; i++){
+        num = num ^ arr[i]
+    }
+    return num
+}
+
+
+console.log(singleNum([1,1,2]))
